@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "datalive-pipeline"
-version = "2.0.0"
+version = "2.0.1"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = []
 packages = [
     { include = "pipeline" },
 ]
