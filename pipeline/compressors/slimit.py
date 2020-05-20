@@ -9,5 +9,5 @@ class SlimItCompressor(CompressorBase):
     (http://pypi.python.org/pypi/slimit/).
     """
     def compress_js(self, js):
-        from slimit import minify
+        from .slimit import minify
         return minify(js)

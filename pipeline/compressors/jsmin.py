@@ -9,5 +9,5 @@ class JSMinCompressor(CompressorBase):
     (http://pypi.python.org/pypi/jsmin/).
     """
     def compress_js(self, js):
-        from jsmin import jsmin
+        from .jsmin import jsmin
         return jsmin(js)
