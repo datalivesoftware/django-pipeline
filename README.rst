@@ -1,5 +1,5 @@
 
-History of the Datalive Fork of django-pipeline
+History of this Datalive Fork of django-pipeline
 ================
 
 3.0.0
