@@ -1,20 +1,19 @@
-Pipeline
-========
 
-Pipeline is an asset packaging library for Django, providing both CSS and
-JavaScript concatenation and compression, built-in JavaScript template support,
-and optional data-URI image and font embedding.
+History of Datalive Fork
+================
 
-Installation
-------------
+3.0.0
+-----
 
-To install it, simply: ::
+* Make Django 3.2 compatible by removing reference to CachedStaticFilesStorage and replacing it with ManifestStaticFilesStorage.  Make sure you have fully tested this works.
 
-    pip install django-pipeline
+2.0.1
+-----
 
+* Fix for get_modified_time(infile)
+* Fix some imports
 
-Documentation
--------------
+2.0.0
+-----
 
-For documentation, usage, and examples, see :
-http://django-pipeline.readthedocs.org
+* Package up all forked changes for datalivepypi
