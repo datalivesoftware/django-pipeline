@@ -7,7 +7,7 @@ import re
 
 from itertools import takewhile
 
-from django.utils.encoding import smart_bytes, force_text
+from django.utils.encoding import smart_bytes, force_str
 
 from pipeline.conf import settings
 from pipeline.storage import default_storage
@@ -177,7 +177,7 @@ class Compressor(object):
         if path in self.__class__.asset_contents:
             return self.__class__.asset_contents[path]
         data = self.read_bytes(path)
-        self.__class__.asset_contents[path] = force_text(base64.b64encode(data))
+        self.__class__.asset_contents[path] = force_str(base64.b64encode(data))
         return self.__class__.asset_contents[path]
 
     def mime_type(self, path):
@@ -211,7 +211,7 @@ class Compressor(object):
 
     def read_text(self, path):
         content = self.read_bytes(path)
-        return force_text(content)
+        return force_str(content)
 
 
 class CompressorBase(object):
@@ -237,7 +237,7 @@ class SubProcessCompressor(CompressorBase):
             raise CompressorError(stderr)
         elif self.verbose:
             print(stderr)
-        return force_text(stdout)
+        return force_str(stdout)
 
 
 class NoopCompressor(CompressorBase):
