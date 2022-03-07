@@ -2,6 +2,6 @@
 
 from django.dispatch import Signal
 
-
-css_compressed = Signal(providing_args=["package"])
-js_compressed = Signal(providing_args=["package"])
+# providing_args=["package"]
+css_compressed = Signal()
+js_compressed = Signal()

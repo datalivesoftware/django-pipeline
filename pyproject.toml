@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "datalive-pipeline"
-version = "3.0.0"
+version = "3.0.1"
 description = ""
 authors = []
 packages = [
