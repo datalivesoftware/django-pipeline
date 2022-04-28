@@ -3,6 +3,16 @@
 History of Datalive Fork
 ================
 
+3.0.2
+-----
+
+* Swapping force_text => force_str (perhaps should be force_bytes? 🤷‍♂️)
+
+3.0.1
+-----
+
+* Address Django 3.2 deprecation warnings
+
 3.0.0
 -----
 
