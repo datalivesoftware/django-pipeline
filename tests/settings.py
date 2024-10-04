@@ -32,7 +32,12 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = local_path('media')
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+STORAGES = {
+    'staticfiles': {
+        'BACKEND': 'pipeline.storage.PipelineStorage'
+    }
+}
+
 STATIC_ROOT = local_path('static/')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (

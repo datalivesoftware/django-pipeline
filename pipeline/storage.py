@@ -10,7 +10,7 @@ from django.contrib.staticfiles.utils import matches_patterns
 
 from django.core.exceptions import ImproperlyConfigured
 from django.core.files.base import File
-from django.core.files.storage import get_storage_class
+from django.core.files.storage import storages
 from django.utils.functional import LazyObject
 
 from pipeline.conf import settings
@@ -172,9 +172,4 @@ class PipelineFinderStorage(BaseFinderStorage):
     finders = finders
 
 
-class DefaultStorage(LazyObject):
-    def _setup(self):
-        self._wrapped = get_storage_class(settings.PIPELINE_STORAGE)()
-
-
-default_storage = DefaultStorage()
+default_storage = storages['default']

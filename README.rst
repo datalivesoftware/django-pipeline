@@ -2,6 +2,11 @@
 History of this Datalive Fork of django-pipeline
 ================
 
+5.0.0
+-----
+
+* Make Django 5.0 compatible by using the STORAGES setting and removing references to get_storage_class.
+
 3.0.0
 -----
 
