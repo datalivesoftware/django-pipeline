@@ -2,6 +2,11 @@
 History of this Datalive Fork of django-pipeline
 ================
 
+5.0.1
+-----
+
+* Fix for default_storage
+
 5.0.0
 -----
 
